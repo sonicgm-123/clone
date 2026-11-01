@@ -1,0 +1,828 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 20px;
+    color: #333;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* CABEÇALHO E BANNER */
+
+.hero {
+    position: relative;
+    min-height: 650px;
+    background: #8e7b57;
+    overflow: hidden;
+    color: #fff;
+}
+
+.slider-home {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.slider-home .slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.slider-home .slide.ativo {
+    opacity: 1;
+}
+
+.topo {
+    position: relative;
+    z-index: 2;
+    width: min(1200px, 94%);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 36px 0;
+}
+
+
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.menu a {
+    display: block;
+    padding: 12px 16px;
+    color: #fff;
+    font: 22px Calibri, Arial, sans-serif;
+    font-weight: 300;
+    transition: 0.25s;
+}
+
+.menu a:hover,
+.menu a.ativo {
+    color: #f47e34;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 0 12px 12px 12px;
+}
+
+.menu-resp,
+.fechar {
+    display: none;
+}
+
+.slogan {
+    position: relative;
+    z-index: 2;
+    width: min(740px, 92%);
+    margin: 90px auto 0;
+    text-align: center;
+    color: #fff;
+    font: 300 clamp(36px, 5vw, 60px)/1.05 Calibri, Arial, sans-serif;
+}
+
+
+.paginacao .selecionado {
+    background: #f47e34;
+}
+
+/* ÁREA PRINCIPAL */
+
+.global {
+    position: relative;
+    margin: -65px auto 0;
+    background: #8e7b57;
+    box-shadow: 0 -25px 45px 25px #8e7b57;
+}
+
+/* TRÊS SERVIÇOS PRINCIPAIS */
+
+.box-01 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 28px;
+    width: min(1200px, 94%);
+    margin: 0 auto;
+    padding: 45px 0 65px;
+}
+
+.box-01 .item {
+    width: 350px;
+    max-width: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 12px;
+}
+
+.box-01 .img {
+    width: min(300px, 80vw);
+    height: min(300px, 80vw);
+    margin: 0 auto 22px;
+    border-radius: 50%;
+    background: #f47e34;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icone {
+    font-size: 105px;
+    color: #fff;
+}
+
+.box-01 .titulo {
+    font: 300 42px Calibri, Arial, sans-serif;
+    color: #fff;
+    margin-bottom: 22px;
+}
+
+.box-01 .conteudo {
+    font: 300 22px/1.5 Calibri, Arial, sans-serif;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.entrar {
+    display: block;
+    width: 220px;
+    max-width: 100%;
+    margin: 0 auto;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    padding: 9px 18px;
+    text-align: center;
+    color: #fff;
+    font: 300 23px Calibri, Arial, sans-serif;
+    transition: 0.25s;
+}
+
+.entrar:hover {
+    background: #f47e34;
+    border-color: #f47e34;
+}
+
+/* APRESENTAÇÃO */
+
+.box-02-total {
+    background: #746447;
+}
+
+.box-02 {
+    width: min(1050px, 90%);
+    margin: auto;
+    padding: 90px 0;
+    text-align: center;
+}
+
+.box-02 .titulo {
+    font: 300 48px/1.15 Calibri, Arial, sans-serif;
+    color: #fff;
+}
+
+.box-02 .titulo span {
+    display: block;
+    margin-top: 8px;
+    color: #f47e34;
+    font: 300 32px/1.3 Calibri, Arial, sans-serif;
+}
+
+.box-02 .conteudo {
+    margin: 24px 0 30px;
+    color: #fff;
+    font: 300 23px/1.6 Calibri, Arial, sans-serif;
+}
+
+/* PORTFÓLIO */
+
+.box-03-total {
+    background: #fff;
+    padding: 78px 0;
+}
+
+.box-03 {
+    width: min(1200px, 94%);
+    margin: auto;
+    text-align: center;
+}
+
+.box-03 > .titulo {
+    font: 40px/1.2 Calibri, Arial, sans-serif;
+    color: #f47e34;
+    margin-bottom: 42px;
+}
+
+.box-03 .box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 18px;
+}
+
+.box-03 .item {
+    width: 215px;
+    padding: 25px 10px;
+    border-radius: 25px;
+    transition: 0.25s;
+}
+
+.box-03 .item:hover {
+    background: #eee;
+}
+
+.box-03 .img {
+    width: 151px;
+    height: 151px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.placeholder {
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #eee, #d4c8b5);
+    color: #786b56;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.box-03 .item .titulo {
+    font: 30px Calibri, Arial, sans-serif;
+    color: #f47e34;
+    margin-bottom: 15px;
+}
+
+.box-03 .item .conteudo {
+    font: 18px/1.5 Calibri, Arial, sans-serif;
+    color: #666;
+}
+
+/* CONTATO - ÁREA LARANJA */
+
+.box-04-total {
+    background: #f47e34;
+    padding: 42px 0;
+}
+
+.box-04 {
+    width: min(650px, 90%);
+    margin: auto;
+}
+
+.box-04 > .titulo {
+    font: 300 40px Calibri, Arial, sans-serif;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* Formulário */
+
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Nome e e-mail na mesma linha */
+
+.campos-linha {
+    display: flex;
+    gap: 14px;
+    width: 100%;
+}
+
+.campo {
+    flex: 1;
+    min-width: 0;
+}
+
+.form-contato input,
+.form-contato textarea {
+    display: block;
+    width: 100%;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    padding: 14px 20px;
+    color: #fff;
+    background: transparent;
+    font: 300 20px Calibri, Arial, sans-serif;
+    outline: none;
+}
+
+.form-contato textarea {
+    width: 100%;
+    height: 120px;
+    resize: vertical;
+}
+
+.form-contato input::placeholder,
+.form-contato textarea::placeholder {
+    color: #fff;
+    opacity: 1;
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus {
+    border-radius: 0 25px 25px 25px;
+}
+
+/* Espaço visual do reCAPTCHA */
+
+
+.recaptcha-falso {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 304px;
+    max-width: 100%;
+    min-height: 78px;
+    padding: 12px;
+    margin: 0 auto;
+    background: #fafafa;
+    border: 1px solid #d3d3d3;
+    color: #222;
+    font: 14px Arial, sans-serif;
+
+}
+
+.captcha-check {
+    width: 28px;
+    height: 28px;
+    border: 2px solid #888;
+    background: #fff;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.captcha-texto {
+    flex: 1;
+}
+
+.captcha-marca {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    color: #555;
+    text-align: center;
+}
+
+.captcha-marca b {
+    font-size: 28px;
+    color: #4285f4;
+    font-weight: normal;
+}
+
+.captcha-marca small {
+    font-size: 8px;
+    line-height: 1.3;
+}
+
+/* Botão Enviar */
+
+.form-contato .submit {
+    display: block;
+    width: 220px;
+    max-width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    color: #f47e34;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    padding: 13px 20px;
+    font: 22px Calibri, Arial, sans-serif;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.form-contato .submit:hover {
+    background: transparent;
+    color: #fff;
+}
+
+/* ACESSIBILIDADE */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* RODAPÉ - SEPARADO DA ÁREA LARANJA */
+
+.rodape-total {
+    background: #746447;
+    color: #fff;
+    text-align: center;
+}
+
+.rodape {
+    width: min(1200px, 95%);
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.rodape > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 25px 35px;
+    font: 24px Calibri, Arial, sans-serif;
+}
+
+.rodape-icone {
+    font-size: 42px;
+}
+
+.rodape-final {
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.12);
+    font: 15px Calibri, Arial, sans-serif;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1200px) {
+    .topo {
+        padding: 22px 0;
+    }
+
+    .menu-resp {
+        display: block;
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        color: #fff;
+        font-size: 27px;
+        padding: 8px 14px;
+        cursor: pointer;
+    }
+
+    .menu {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 10;
+        background: rgba(0, 0, 0, 0.92);
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .menu.aberto {
+        display: flex;
+    }
+
+    .menu a {
+        font-size: 28px;
+    }
+
+    .fechar {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 30px;
+        background: none;
+        border: 0;
+        color: #f47e34;
+        font-size: 45px;
+        cursor: pointer;
+    }
+
+    .rodape > div {
+        width: 100%;
+        padding: 18px 10px;
+    }
+
+    .hero {
+        min-height: 570px;
+    }
+
+    .slogan {
+        margin-top: 85px;
+    }
+}
+
+@media (max-width: 750px) {
+    .hero {
+        min-height: 500px;
+    }
+
+    .topo {
+        align-items: center;
+    }
+
+    .logo {
+        width: 150px;
+        min-height: 55px;
+        font-size: 16px;
+    }
+
+    .slogan {
+        font-size: 34px;
+        margin-top: 75px;
+    }
+
+    .paginacao {
+        bottom: 28px;
+    }
+
+    .paginacao span {
+        width: 13px;
+        height: 13px;
+    }
+
+    .box-01 {
+        padding: 30px 0 45px;
+    }
+
+    .box-01 .item {
+        width: 340px;
+    }
+
+    .box-01 .img {
+        width: 230px;
+        height: 230px;
+    }
+
+    .icone {
+        font-size: 85px;
+    }
+
+    .box-01 .titulo {
+        font-size: 36px;
+    }
+
+    .box-01 .conteudo {
+        font-size: 20px;
+    }
+
+    .box-02 {
+        padding: 60px 0;
+    }
+
+    .box-02 .titulo {
+        font-size: 36px;
+    }
+
+    .box-02 .titulo span {
+        font-size: 25px;
+    }
+
+    .box-02 .conteudo {
+        font-size: 20px;
+    }
+
+    .box-03-total {
+        padding: 55px 0;
+    }
+
+    .box-03 > .titulo {
+        font-size: 32px;
+    }
+
+    .box-04 > .titulo {
+        font-size: 34px;
+    }
+
+    .rodape > div {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .campos-linha {
+        flex-direction: column;
+    }
+
+    .hero {
+        min-height: 440px;
+    }
+
+    .slogan {
+        font-size: 29px;
+    }
+
+    .box-01 .img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .box-02 .titulo {
+        font-size: 31px;
+    }
+
+    .box-02 .titulo span {
+        font-size: 22px;
+    }
+
+    .box-03 .item {
+        width: 100%;
+    }
+
+    .box-04 {
+        width: 90%;
+    }
+
+    .box-04 > .titulo {
+        font-size: 30px;
+    }
+
+    .recaptcha-falso {
+        width: 100%;
+    }
+    
+/* MAPA EM TODA A LARGURA */
+.mapa {
+    width: 100%;
+    height: 360px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #d8f5e6;
+}
+
+.mapa iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* RODAPÉ NO ESTILO ORIGINAL */
+.rodape-total {
+    width: 100%;
+    background: #746447;
+    color: #fff;
+    text-align: center;
+    padding: 16px 20px 12px;
+}
+
+.rodape {
+    width: min(760px, 100%);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.rodape-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    font: 16px Verdana, Arial, sans-serif;
+}
+
+.rodape-icone {
+    font-size: 48px;
+    line-height: 1;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 5px;
+}
+
+.redes-sociais a {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #fff;
+    color: #746447;
+    font: bold 40px Arial, sans-serif;
+}
+
+.creditos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 25px;
+    color: #fff;
+    font-size: 11px;
+}
+
+.creditos small {
+    font-size: 10px;
+}
+
+@media (max-width: 600px) {
+    .mapa {
+        height: 300px;
+    }
+
+    .rodape {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .rodape-item {
+        font-size: 13px;
+    }
+
+    .rodape-icone {
+        font-size: 38px;
+    }
+
+    .redes-sociais a {
+        width: 52px;
+        height: 52px;
+        font-size: 32px;
+    }
+}
+/*  LOGO      */
+
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100px;
+    height: 50px;
+    flex-shrink: 0;
+    border: none;
+}
+
+.logo img {
+    display: block;
+    width: 100px!important;
+    height: 50px;
+    object-fit: contain;
+    object-position: left center;
+}
+/*LAPTOP*/
+/* ÍCONE DE COMPUTADOR */
+.box-01 .img i.fa-laptop {
+    display: inline-block;
+    font-size: 105px !important;
+    line-height: 1;
+    color: #fff;
+}
+/* ICONE HOSPEDAGEM*/
+.icone {
+    font-size: 105px;
+    color: #fff;
+}
+/*ICONE MANUTENÇÃO*/
+.icone {
+    font-size: 105px;
+    color: #fff;
+}
+
+/* footer*/
+.credito-rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    .credito-rodape a {
+    font-size: 11px !important;
+}
+}
+
+.redes-sociais img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    display: block;
+}
+
+}
